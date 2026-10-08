@@ -1,9 +1,9 @@
 # World Tree Sims — Simulation Archive of the Lumin Framework
 
-Complete simulation code and source data for the Lumin Framework papers, published October 1, 2026.
+Complete simulation code and source data for the Lumin Framework papers, published October 8, 2026.
 Every script named in the papers appears here under its exact printed filename; each figure caption in
-the papers credits its generating script. Companion to the instruments repository (Boχ and the Polygon
-Ladder live sources) and to the papers below.
+the papers credits its generating script. Companion to the live instruments — Boχ at https://box.eternityprocess.com and the Polygon Ladder at
+https://box.eternityprocess.com/ladder — and to the papers below.
 
 **Papers**
 - *The Blade and the Field* — https://doi.org/10.5281/zenodo.23064205
@@ -32,6 +32,12 @@ Run environments: Python 3.10+ (`pip install -r requirements.txt`) for `.py`; Wo
 The canonical reproduction protocol is *The Blade and the Field* §12; all k-sweep table values derive from
 `common/fc_k_sweep_reference.py`.
 
+The archive preserves each script exactly as its documented run executed it, including the input and
+output paths of the original development environment (`/mnt/...` locations). Before running a script,
+point its input paths at this repository’s copies — the ephemeris inputs live in `data/ephemeris/` — and
+its output paths wherever the artifacts should land. The computation is unchanged by the path edit;
+`SHA256SUMS` certifies the archived bytes, and the papers’ printed values are the reproduction targets.
+
 | Artifact | Cited in | Location |
 |---|---|---|
 | `E8_Dimensional_Scaling_Test_v2.py` | Spine §3.5, §3.7, §4.3, §4.8 | `spine/scaling/` |
@@ -56,6 +62,7 @@ The canonical reproduction protocol is *The Blade and the Field* §12; all k-swe
 | `closure_runs.py` | Spine §3, §3.8, §6.2 | `spine/impedance/` |
 | `fc_k_sweep_reference.py` | BatF §11; Spine §2.2, §4.7 | `common/` |
 | `fotg_ledger_identity.py` | BatF §4, §12 | `batf/` |
+| `fig_gap_supremum.py` | BatF §7, §12 (Figure 19 renderer) | `batf/` |
 | `fotg_still_point.py` | BatF §4, §12 | `batf/` |
 | `galactic_disk_fc_phase1b.py` | Spine §7.4, §7.7 | `spine/galactic/` |
 | `galactic_disk_fc_phase1c.py` | Spine §7.5, §7.7 | `spine/galactic/` |
